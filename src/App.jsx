@@ -43,7 +43,7 @@ export default function App() {
       </header>
       <div className="container">
         <PlantList plants={PLANTS} addToCart={addToCart} />
-        //Here is the plant data, and here is the function to add a plant to the cart.
+        {/* Here is the plant data, and here is the function to add a plant to the cart. */}  
       </div>
     </div>
   );
