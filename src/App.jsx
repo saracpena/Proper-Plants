@@ -1,5 +1,6 @@
-import { PLANTS } from "./data.js";
+import  PLANTS  from "./data.js";
 import PlantList from "./Plants/PlantList.jsx";
+import Cart from "./Cart/Cart.jsx";
 import { useState } from "react";
 
 export default function App() {
@@ -36,15 +37,16 @@ export default function App() {
 
   /** Render **/
   return (
-    <div className="app">
-      <header>
-        <h1>Plant Shop</h1>
-        <p>Cart: {cart.length} items</p>
-      </header>
-      <div className="container">
-        <PlantList plants={PLANTS} addToCart={addToCart} />
-        {/* Here is the plant data, and here is the function to add a plant to the cart. */}  
-      </div>
-    </div>
+<div className="container">
+  <PlantList
+    plants={PLANTS}
+    addToCart={addToCart}
+  />
+
+  <Cart
+    cart={cart}
+    updateCartQuantity={updateCartQuantity}
+  />
+</div>
   );
 }
