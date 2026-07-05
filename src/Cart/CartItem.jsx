@@ -8,7 +8,7 @@ export default function CartItem({ item, updateCartQuantity }) {
   return (
     <li className="cart-item">
       <div>
-        <h3>{item.name}</h3>
+        <h3>{item.name}{item.image}</h3>
         <p>Quantity: {item.quantity}</p>
       </div>
 

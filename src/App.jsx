@@ -35,6 +35,12 @@ export default function App() {
     );
   }
 
+  /** CLEAR CART */
+
+  function clearCart() {
+    setCart([]);
+  }
+
   /** Render **/
   return (
 <div className="container">
@@ -43,10 +49,11 @@ export default function App() {
     addToCart={addToCart}
   />
 
-  <Cart
-    cart={cart}
-    updateCartQuantity={updateCartQuantity}
-  />
+ <Cart
+  cart={cart}
+  updateCartQuantity={updateCartQuantity}
+  clearCart={clearCart}
+/>
 </div>
   );
 }
