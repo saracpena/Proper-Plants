@@ -6,17 +6,16 @@ data.js = hard-coded plant data */
 
 export default function CartItem({ item, updateCartQuantity }) {
   return (
-    <li>
-      <span>{item.name}</span>
-      <span>Quantity: {item.quantity}</span>
+    <li className="cart-item">
+      <div>
+        <h3>{item.name}</h3>
+        <p>Quantity: {item.quantity}</p>
+      </div>
 
-      <button onClick={() => updateCartQuantity(item.id, 1)}>
-        +
-      </button>
-
-      <button onClick={() => updateCartQuantity(item.id, -1)}>
-        -
-      </button>
+      <div className="cart-actions">
+        <button onClick={() => updateCartQuantity(item.id, -1)}>-</button>
+        <button onClick={() => updateCartQuantity(item.id, 1)}>+</button>
+      </div>
     </li>
   );
 }
